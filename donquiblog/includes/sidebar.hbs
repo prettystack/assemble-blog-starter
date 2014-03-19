@@ -1,0 +1,76 @@
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+    <!-- Logo -->
+    <a href="{{ site.url }}/">
+      <div id="logo">
+        <h1> {{ config.site.name}} </h1>
+      </div>
+    </a>
+
+    <!-- Nav -->
+    <nav class="nav">
+
+      <ul>
+
+        {{#each config.menus}}
+
+          {{#sameUrl url ../pagename }}
+            <li class="current_page_item"><a href="{{url}}">{{name}}</a></li>
+          {{else}}
+            <li><a href="{{url}}">{{name}}</a></li>
+          {{/sameUrl}}
+
+        {{/each}}
+      </ul>
+    </nav>
+    <nav class="nav">
+      <header>
+        <h2>Recent Posts</h2>
+      </header>
+      <ul>
+        {{#withSort post 'data.date'}}
+          {{#eachIndex this.pages}}
+          {{#lt index 3}}
+            {{#sameUrl item.pagename ../../../pagename }}
+              <li class="current_page_item"><a href="{{ replaceStr item.dest 'dist' '' }}">{{ item.data.title }}</a></li>
+            {{else}}
+              <li><a href="{{ replaceStr item.dest 'dist' ''}}">{{ item.data.title }}</a></li>
+            {{/sameUrl}}
+
+          {{/lt}}
+          {{/eachIndex}}
+        {{/withSort}}
+
+      </ul>
+    </nav>
+
+  <!-- Search -->
+<!--<section class="is-search">
+      <form method="post" action="#">
+        <input type="text" class="text" name="search" placeholder="Search" />
+      </form>
+    </section> -->
+
+  <!-- Text -->
+    <section class="is-text-style1">
+      <div class="inner">
+        <p>
+          <a href="http://prettystack.com">Prettystack</a>: Jekyll demo application.<br />
+          Template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 up!</a>
+        </p>
+      </div>
+    </section>
+
+  <!-- Copyright -->
+    <div id="copyright">
+      <p>
+        &copy; 2014 {{ site.name }}.<br />
+        Content: Miguel de Cervantes<br />
+        Images: Gustave Doré<br />
+        Design: <a href="http://html5up.net/">HTML5 UP</a>
+      </p>
+    </div>
+
+</div>

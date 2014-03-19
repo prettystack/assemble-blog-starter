@@ -1,0 +1,37 @@
+---
+layout: default.hbs
+---
+
+{{#withSort post 'data.date'}}
+  {{#each this.pages}}
+
+  <article class="is-post is-post-excerpt">
+    <header>
+      <h2><a href="{{ replaceStr this.dest 'dist' ''  }}">{{ data.title }}</a></h2>
+      <span class="byline"> {{ data.subtitle }} </span>
+    </header>
+    <div class="info">
+
+      <span class="date">
+        <span class="month">{{ formatDate data.date "%b %d, %Y" }}</span>
+      </span>
+      <ul class="stats">
+      </ul>
+    </div>
+
+    {{#if data.image }}
+      <a href="{{ replaceStr this.dest 'dist' ''  }}" class="image image-full"><img src="/images/{{ data.image }}" alt="" /></a>
+    {{/if}}
+
+    <div class="post">
+      {{#markdown}}
+        {{{excerp this.page 2}}}
+      {{/markdown}}
+    </div>
+
+    <a href="{{ replaceStr this.dest 'dist' ''  }}" class="image image-full">Continue reading...</a>
+  </article>
+
+
+  {{/each}}
+{{/withSort}}
