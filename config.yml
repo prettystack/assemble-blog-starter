@@ -1,0 +1,20 @@
+
+site:
+  url: http://prettystack.com/live/donquiblog
+  name: Don Quiblog
+  description: Performant Assemble.io blog starter
+  build: dist/
+
+menus:
+  - name: Home
+    url: /
+
+  - name: About
+    url: /about.html
+
+  - name: Contact
+    url: /contact.html
+
+# Disqus configuration, comment these lines to disable it
+disqus:
+  shortname: donquiblog
