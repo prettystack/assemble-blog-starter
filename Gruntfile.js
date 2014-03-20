@@ -6,15 +6,16 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     config: grunt.file.readYAML('./config.yml'),
+    theme: 'themes/<%= config.theme %>',
 
     assemble: {
       options: {
         flatten: true,
         data: 'config.yml',
-        layoutdir: 'donquiblog/layouts',
+        layoutdir: '<%= theme %>/layouts',
         layout: 'default.hbs',
-        partials: ['donquiblog/includes/*.hbs', 'donquiblog/pages/partials/*.hbs'],
-        helpers: 'donquiblog/helpers/**/*.js',
+        partials: ['<%= theme %>/includes/*.hbs'],
+        helpers: 'helpers/**/*.js',
         plugins: ['assemble-contrib-sitemap'],
 
         sitemap: {
@@ -34,8 +35,8 @@ module.exports = function(grunt) {
 
       dev: {
         files: [
-          { '<%= config.site.build %>/': ['donquiblog/pages/*.hbs'] },
-          { expand: true, cwd: 'donquiblog/', src: ['posts/*.md'], dest: '<%= config.site.build %>/'}
+          { '<%= config.site.build %>/': ['pages/*.hbs'] },
+          { expand: true, src: ['posts/*.md'], dest: '<%= config.site.build %>/'}
         ]
       }
     },
@@ -47,12 +48,12 @@ module.exports = function(grunt) {
 
     watch: {
       site: {
-        files: ['Gruntfile.js', 'donquiblog/**/*.hbs', 'donquiblogpages/**/*.hbs', 'donquiblog/**/*.js', 'donquiblogblog/*.md'],
+        files: ['Gruntfile.js', '<%= theme %>/**/*.hbs', 'pages/**/*.hbs', '<%= theme %>/**/*.js', '<%= theme %>/*.md'],
         tasks: ['assemble']
       },
 
       assets: {
-        files: ['donquiblog/assets/**/*.css', 'donquiblog/assets/**/*.js'],
+        files: ['<%= theme %>/assets/**/*.css', '<%= theme %>/assets/**/*.js'],
         tasks: ['newer:copy']
       }
     },
@@ -70,10 +71,10 @@ module.exports = function(grunt) {
     copy: {
       assets: {
         files: [
-          { flatten: false, expand: true, cwd: 'donquiblog/assets/css', src: '**/*', dest:'<%= config.site.build %>/css/' },
-          { flatten: false, expand: true, cwd: 'donquiblog/assets/js', src: '*', dest:'<%= config.site.build %>/js/' },
-          { flatten: false, expand: true, cwd: 'donquiblog/assets/images', src:'*', dest:'<%= config.site.build %>/images/' },
-          { flatten: false, expand: true, cwd: 'donquiblog/assets/fonts', src:'*', dest:'<%= config.site.build %>/fonts/' }
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/css', src: '**/*', dest:'<%= config.site.build %>/css/' },
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/js', src: '*', dest:'<%= config.site.build %>/js/' },
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/images', src:'*', dest:'<%= config.site.build %>/images/' },
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/fonts', src:'*', dest:'<%= config.site.build %>/fonts/' }
         ]
       }
     },
