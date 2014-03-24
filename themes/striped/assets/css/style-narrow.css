@@ -8,11 +8,13 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+@media(min-width:641px) and (max-width:1200px) {
+
 	body
 	{
 		min-width: 1000px;
 	}
-	
+
 	input, textarea
 	{
 		font-size: 10.5pt;
@@ -84,7 +86,7 @@
 						display: inline-block;
 						padding-right: 0.5em;
 					}
-					
+
 						.is-post .info .stats li a:before
 						{
 							position: relative;
@@ -98,7 +100,7 @@
 /*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
-		
+
 	#content
 	{
 		padding: 2em 3em 6em 3em;
@@ -108,8 +110,10 @@
 		{
 			margin-left: 14em; /* = sidebar width */
 		}
-		
+
 		body.right-sidebar #content
 		{
 			margin-right: 14em; /* = sidebar width */
 		}
+
+}

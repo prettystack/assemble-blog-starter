@@ -8,11 +8,13 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+@media (min-width:1201px) {
+
 	body
 	{
 		min-width: 1200px;
 	}
-	
+
 	input, textarea
 	{
 		font-size: 11pt;
@@ -30,7 +32,7 @@
 	.is-post
 	{
 	}
-	
+
 		.is-post h2
 		{
 			font-size: 3.25em;
@@ -86,7 +88,7 @@
 				{
 					display: none;
 				}
-			
+
 				.is-post .info .date .day
 				{
 					display: block;
@@ -95,17 +97,17 @@
 					font-weight: 700;
 					color: #1b252a;
 				}
-		
+
 			.is-post .info .stats
 			{
 				position: relative;
 			}
-			
+
 				.is-post .info .stats li
 				{
 					margin: 0.35em 0 0 0;
 				}
-				
+
 				.is-post .info .stats li a
 				{
 					position: relative;
@@ -113,7 +115,7 @@
 					text-align: right;
 					padding: 0 0.5em 0 0.5em;
 				}
-				
+
 					.is-post .info .stats li a:before
 					{
 						position: absolute;
@@ -129,7 +131,7 @@
 /*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
-		
+
 	#content
 	{
 		padding: 3em 5em 8em 5em;
@@ -139,9 +141,11 @@
 		{
 			margin-left: 21em; /* = sidebar width + 7 */
 		}
-		
+
 		body.right-sidebar #content
 		{
 			margin-right: 14em; /* = sidebar width */
 			margin-left: 7em;
 		}
+
+}
