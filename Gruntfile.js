@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 
       prod: {
         options: {
-          port: 8080,
+          port: 8001,
           base: '<%= config.site.build %>',
           keepalive: true
         }
@@ -82,6 +82,16 @@ module.exports = function(grunt) {
           { flatten: false, expand: true, cwd: '<%= theme %>/assets/css', src: '**/*', dest:'<%= config.site.build %>/css/' },
           { flatten: false, expand: true, cwd: '<%= theme %>/assets/js', src: '*', dest:'<%= config.site.build %>/js/' },
           { flatten: false, expand: true, cwd: '<%= theme %>/assets/images', src:'*', dest:'<%= config.site.build %>/images/' },
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/fonts', src:'*', dest:'<%= config.site.build %>/fonts/' }
+        ]
+      },
+
+      prod: {
+        files: [
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/css', src: '**/*', dest:'<%= config.site.build %>/tmp/css/' },
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/js', src: '*', dest:'<%= config.site.build %>/tmp/js/' },
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/images', src:'*', dest:'<%= config.site.build %>/images/' },
+          { flatten: false, expand: true, cwd: '<%= theme %>/assets/css', src: '**/*.png', dest:'<%= config.site.build %>/css/' },
           { flatten: false, expand: true, cwd: '<%= theme %>/assets/fonts', src:'*', dest:'<%= config.site.build %>/fonts/' }
         ]
       }
@@ -116,9 +126,27 @@ module.exports = function(grunt) {
         }]
       }
     },
+
+    useminPrepare: {
+      options: {
+        dest: '<%= config.site.build %>',
+        root: '<%= config.site.build %>/tmp'
+      },
+      html: '<%= config.site.build %>/index.html'
+    },
+
+    usemin: {
+      options: {
+        assetsDirs: ['<%= config.site.build %>'],
+      },
+      html: ['<%= config.site.build %>/{,*/}*.html'],
+      css: ['<%= config.site.build %>/{,*/}*.css']
+    },
+
+
   });
 
   grunt.registerTask('default', ['clean', 'newer:assemble', 'newer:copy:assets', 'concurrent:dev']);
 
-  grunt.registerTask('prod', ['clean', 'assemble', 'copy:assets', 'htmlmin', 'connect:prod']);
+  grunt.registerTask('prod', ['clean', 'assemble', 'copy:prod', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'htmlmin', 'clean:tmp', 'connect:prod']);
 };

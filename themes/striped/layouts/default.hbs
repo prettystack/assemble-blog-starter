@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="/css/style-narrow.css" />
     <link rel="stylesheet" href="/css/style-narrower.css" />
     <link rel="stylesheet" href="/css/style-wide.css" />
-
-    <script src="/js/toggleSidebar.js"></script>
+    <!-- endbuild -->
 
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><script src="/js/html5shiv.js"></script><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
@@ -57,5 +56,10 @@
 
     {{#if config.ga}}
     {{/if}}
+
+    <!-- build:js /js/{{config.site.name}}.js -->
+      <script src="/js/toggleSidebar.js"></script>
+    <!-- endbuild -->
+
   </body>
 </html>

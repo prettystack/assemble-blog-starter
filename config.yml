@@ -2,7 +2,7 @@ theme: striped
 
 site:
   url: http://prettystack.com/live/donquiblog
-  name: Don Quiblog
+  name: DonQuiblog
   description: Performant Assemble.io blog starter
   build: dist/
 
