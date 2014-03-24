@@ -21,6 +21,7 @@
     "grunt-ftp-deploy": "~0.1.1",
     "grunt-ftp": "~0.1.0",
     "handlebars-helper-compose": "~0.2.12",
-    "load-grunt-tasks": "~0.4.0"
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-contrib-htmlmin": "^0.2.0"
   }
 }

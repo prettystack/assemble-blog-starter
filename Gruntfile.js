@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         ],
       },
 
-      dev: {
+      blogstarter: {
         files: [
           { '<%= config.site.build %>/': ['pages/*.hbs'] },
           { expand: true, src: ['posts/*.md'], dest: '<%= config.site.build %>/'}
@@ -65,6 +65,14 @@ module.exports = function(grunt) {
           base: '<%= config.site.build %>',
           keepalive: true
         }
+      },
+
+      prod: {
+        options: {
+          port: 8080,
+          base: '<%= config.site.build %>',
+          keepalive: true
+        }
       }
     },
 
@@ -86,8 +94,31 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
         }
       }
-    }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+          removeCommentsFromCDATA: true,
+          removeEmptyAttributes: true,
+          removeOptionalTags: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.site.build %>/',
+          src: '{,*/}*.html',
+          dest: '<%= config.site.build %>/'
+        }]
+      }
+    },
   });
 
-  grunt.registerTask('default', ['clean', 'newer:assemble:dev', 'newer:copy:assets', 'concurrent:dev']);
+  grunt.registerTask('default', ['clean', 'newer:assemble', 'newer:copy:assets', 'concurrent:dev']);
+
+  grunt.registerTask('prod', ['clean', 'assemble', 'copy:assets', 'htmlmin', 'connect:prod']);
 };
