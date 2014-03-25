@@ -17,8 +17,11 @@ layout: default.hbs
       </span>
 
       <ul class="stats">
-        <li><a href="{{ replaceStr this.dest 'dist' ''  }}#disqus_thread" class="fa fa-comment">?</a></li>
+        {{#if ../../config.disqus.shortname }}
+          <li><a href="{{ replaceStr this.dest 'dist' ''  }}#disqus_thread" class="fa fa-comment">?</a></li>
+        {{/if}}
       </ul>
+
     </div>
 
     {{#if data.image }}
