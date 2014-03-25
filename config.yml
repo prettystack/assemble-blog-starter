@@ -1,7 +1,7 @@
 theme: striped
 
 site:
-  url: http://prettystack.com/live/donquiblog
+  url: http://prettystack.github.io/jekyll-blog-starter
   name: DonQuiblog
   description: Performant Assemble.io blog starter
   build: dist/
@@ -19,3 +19,6 @@ menus:
 # Disqus configuration, comment these lines to disable it
 disqus:
   shortname: donquiblog
+
+# Google analytics
+ga: UA-XXXXXXXX-X
