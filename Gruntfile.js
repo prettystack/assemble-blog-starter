@@ -165,11 +165,25 @@ module.exports = function(grunt) {
           dest: '<%= config.site.build %>/'
         }]
       }
+    },
+
+    rev: {
+      dist: {
+        files: {
+          src: [
+            '<%= config.site.build %>/{,*/}*.js',
+            '<%= config.site.build %>/{,*/}*.css',
+            '<%= config.site.build %>/fonts/*',
+            '<%= config.site.build %>/images/{,*/}*.{png,jpg,jpeg,svg}',
+          '<%= config.site.build %>/css/images/{,*/}*.{png,jpg,jpeg,svg}'
+          ]
+        }
+      }
     }
 
   });
 
   grunt.registerTask('default', ['clean', 'newer:assemble', 'newer:copy:assets', 'concurrent:dev']);
 
-  grunt.registerTask('prod', ['clean', 'assemble', 'copy:prod', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'imagemin', 'svgmin', 'usemin', 'htmlmin', 'clean:tmp', 'connect:prod']);
+  grunt.registerTask('prod', ['clean', 'assemble', 'copy:prod', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'imagemin', 'svgmin', 'rev', 'usemin', 'htmlmin', 'clean:tmp', 'connect:prod']);
 };
