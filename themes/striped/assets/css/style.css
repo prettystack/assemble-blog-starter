@@ -48,7 +48,6 @@ pre code {
   display: block;
   padding: 0.5em;
   color: #333;
-  background: #f8f8ff;
 }
 pre .comment,
 pre .template_comment,
@@ -220,7 +219,6 @@ pre {
 code {
 padding: 2px 6px 3px;
 color: #960f4a;
-background-color: #fcf0f7;
 line-height: 1.5;
 white-space: nowrap;
 }
@@ -229,7 +227,6 @@ pre code {
 	display: block;
 	padding: 0.5em;
 	color: #333;
-	background: #f8f8ff;
 	font-size: 14px;
 	white-space: pre-wrap;
 }
