@@ -13,7 +13,7 @@ layout: default.hbs
     <div class="info">
 
       <span class="date">
-        <span class="month">{{ formatDate data.date "%b %d, %Y" }}</span>
+        <span class="month">{{ formatDate data.date "%b"}}<span></span></span> <span class="day">{{ formatDate data.date "%d"}}</span><span class="year">, {{ formatDate data.date "%Y"}}</span>
       </span>
       <ul class="stats">
       </ul>
