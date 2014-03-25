@@ -2,7 +2,11 @@
 
 ## Description
 
-This is a starter kit to build an [Assemble](http://assemble.io) blog. It contains optional integration to external services such as Disqus, Google Analytics, Facebook, ... This starter kit comes with a superb theme by [HTML5 UP](http://html5up.net/) and some placeholder content from the [Gutenberg project](http://www.gutenberg.org/).
+This is a complete [Assemble](http://assemble.io) boilerplate to get you started quickly on your next blog. Simply clone the repo, create new blog posts, hit `grunt prod` and you get a fully optimized website ready to be deployed!
+
+[![Striped Preview](http://www.prettystack.com/img/ce673ad7.donquiblog.png)](http://prettystack.github.io/jekyll-blog-starter)
+
+This starter kit contains integration to external services such as Disqus, Google Analytics, Facebook, ... It also comes with one of the great themes made by [HTML5 UP](http://html5up.net/) and to break from the boring 'lorem ipsum' our content comes from the [Gutenberg project](http://www.gutenberg.org/).
 
 Make sure to check out all our [starter kits](https://github.com/prettystack/), we will soon have starter kit for corporate website and admin interface.
 
@@ -26,7 +30,15 @@ Make sure to check out all our [starter kits](https://github.com/prettystack/), 
 
 ## Configuration
 
-Read the commented config.yml file for more information.
+Your blog options are located in `config.yml`
+
+### Menu configuration
+
+To add / remove menu items, edit the `menu` section in `config.yml`. Also do not forget to add the corresponding pages to the `pages/` directory
+
+### Google analytics integration
+
+Add your GA code to *config.yml* to enable analyics
 
 ### Disqus integration
 
