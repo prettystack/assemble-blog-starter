@@ -38,11 +38,15 @@ To add / remove menu items, edit the `menu` section in `config.yml`. Also do not
 
 ### Google analytics integration
 
-Add your GA code to *config.yml* to enable analyics
+Add your GA code to `config.yml` to enable analyics
+
+### Google webmaster
+
+You can either enable authentification with GA or add your [google webmaster](https://www.google.com/webmasters/) verification code in `_config.yml`.
 
 ### Disqus integration
 
-Add your disqus shortname in *config.yml* to enable disqus threads. For correct display, go to [settings/general](http://disqus.com/admin/settings/general/) and only keep numbers in "Comment Count Link".
+Add your disqus shortname in `config.yml` to enable disqus threads. For correct display, go to [settings/general](http://disqus.com/admin/settings/general/) and only keep numbers in "Comment Count Link".
 
 
 ## Credits
