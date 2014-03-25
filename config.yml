@@ -20,5 +20,6 @@ menus:
 disqus:
   shortname: donquiblog
 
-# Google analytics
-ga: UA-XXXXXXXX-X
+google:
+  analytics: UA-49342017-1 # Google analytics
+  verification: "mLz0EXywn-dwnrN2y6nCZRlSvFTIm61gwANPbK0o2Uk" # Google webmaster verification

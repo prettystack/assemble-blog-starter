@@ -9,7 +9,10 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    {{> google_verification }}
+    
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
      <!-- build:css /css/{{config.site.name}}.css -->
     <link rel="stylesheet" href="/css/skel-noscript.css" />
@@ -19,8 +22,6 @@
     <link rel="stylesheet" href="/css/style-narrow.css" />
     <link rel="stylesheet" href="/css/style-narrower.css" />
     <link rel="stylesheet" href="/css/style-wide.css" />
-    <link rel="stylesheet" href="/css/coderay.css" />
-    <link rel="stylesheet" href="/css/pygment.css" />
     <!-- endbuild -->
 
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
@@ -52,18 +53,8 @@
         {{> sidebar }}
     </div>
 
-    {{#if config.disqus.shortname }}
-      {{> disqus_count }}
-    {{/if }}
-
-    {{#if config.ga}}
-    <script>
-      var _gaq=[['_setAccount','{{config.ga}}'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-    {{/if}}
+    {{> disqus_count }}
+    {{> google_analytics }}
 
     <!-- build:js /js/{{config.site.name}}.js -->
       <script src="/js/toggleSidebar.js"></script>
