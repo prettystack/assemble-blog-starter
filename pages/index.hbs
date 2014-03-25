@@ -15,7 +15,9 @@ layout: default.hbs
       <span class="date">
         <span class="month">{{ formatDate data.date "%b"}}<span></span></span> <span class="day">{{ formatDate data.date "%d"}}</span><span class="year">, {{ formatDate data.date "%Y"}}</span>
       </span>
+
       <ul class="stats">
+        <li><a href="{{ replaceStr this.dest 'dist' ''  }}#disqus_thread" class="fa fa-comment">?</a></li>
       </ul>
     </div>
 

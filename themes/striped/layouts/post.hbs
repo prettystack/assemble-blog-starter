@@ -15,6 +15,11 @@ layout: default.hbs
       <span class="month">{{ formatDate date "%b"}}<span></span></span> <span class="day">{{ formatDate date "%d"}}</span><span class="year">, {{ formatDate date "%Y"}}</span>
     </span>
 
+    <ul class="stats">
+      {{#if config.disqus.shortname }}
+        <li><a href="{{ url }}#disqus_thread" class="fa fa-comment">?</a></li>
+      {{/if}}
+    </ul>
   </div>
 
   {{#if image }}
