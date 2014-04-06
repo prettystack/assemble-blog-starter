@@ -50,11 +50,14 @@ Add your disqus shortname in `config.yml` to enable disqus threads. For correct 
 ## Custom themes
 
 All themes are located under the `themes` directory. Themes need the following structure:
+
 └── assets
     ├── css             -> css + fonts
     └── images          
-    └── js              
+    └── js             
+     
 ├── includes            -> optional. list of partials
+
 ├── layouts             -> layouts for pages. default and post layout are needed to build the blog site
 
 To change the default theme, simply modify `theme` variable in `config.yml`
