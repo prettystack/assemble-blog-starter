@@ -27,7 +27,6 @@ Make sure to check out all our [starter kits](https://github.com/prettystack/), 
 * Customize your `config.yml` (see below)
 * Add new posts by creating markdown file in the `posts` directory
 
-
 ## Configuration
 
 Your blog options are located in `config.yml`
@@ -42,12 +41,23 @@ Add your GA code to `config.yml` to enable analyics
 
 ### Google webmaster
 
-You can either enable authentification with GA or add your [google webmaster](https://www.google.com/webmasters/) verification code in `_config.yml`.
+You can either enable authentification with GA or add your [google webmaster](https://www.google.com/webmasters/) verification code in `config.yml`.
 
 ### Disqus integration
 
 Add your disqus shortname in `config.yml` to enable disqus threads. For correct display, go to [settings/general](http://disqus.com/admin/settings/general/) and only keep numbers in "Comment Count Link".
 
+## Custom themes
+
+All themes are located under the `themes` directory. Themes need the following structure:
+└── assets
+    ├── css             -> css + fonts
+    └── images          
+    └── js              
+├── includes            -> optional. list of partials
+├── layouts             -> layouts for pages. default and post layout are needed to build the blog site
+
+To change the default theme, simply modify `theme` variable in `config.yml`
 
 ## Credits
 

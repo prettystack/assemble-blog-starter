@@ -1,11 +1,14 @@
+# Theme name.
 theme: striped
 
+# site globals
 site:
   url: http://prettystack.github.io/jekyll-blog-starter
   name: DonQuiblog
   description: Performant Assemble.io blog starter
   build: dist/
 
+# Main menu
 menus:
   - name: Home
     url: /
