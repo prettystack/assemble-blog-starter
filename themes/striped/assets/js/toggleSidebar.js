@@ -1,4 +1,4 @@
-
+/* globals document, window */
 var toggleClass = function(el, klass) {
     var cl = el.classList;
     if (cl.contains(klass)) {
@@ -6,11 +6,11 @@ var toggleClass = function(el, klass) {
     } else {
       cl.add(klass);
     }
-}
+};
 
 window.onload = function() {
   var slideMenuButton = document.getElementById('slide-menu-button');
-  slideMenuButton.onclick = function(e) {
+  slideMenuButton.onclick = function() {
     var site = document.getElementById('content');
     toggleClass(site, 'open');
 

@@ -46,15 +46,27 @@ module.exports = function(grunt) {
       tmp: 'dist/tmp/'
     },
 
+    jshint: {
+      all: ['helpers/*.js'],
+      options: {
+        jshintrc: ".jshintrc",
+      }
+    },
+
     watch: {
       site: {
-        files: ['Gruntfile.js', '<%= theme %>/**/*.hbs', 'pages/**/*.hbs', '<%= theme %>/**/*.js', '<%= theme %>/*.md'],
-        tasks: ['assemble']
+        files: ['Gruntfile.js', '<%= theme %>/**/*.hbs', 'pages/**/*.hbs', 'posts/**/*.md', '<%= theme %>/**/*.js', '<%= theme %>/*.md'],
+        tasks: ['newer:assemble']
       },
 
       assets: {
         files: ['<%= theme %>/assets/**/*.css', '<%= theme %>/assets/**/*.js'],
         tasks: ['newer:copy']
+      },
+
+      js: {
+        files: ['helpers/*.js'],
+        tasks: ['newer:jshint']
       }
     },
 

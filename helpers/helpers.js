@@ -1,7 +1,5 @@
-var fs = require("fs");
-var path = require("path");
 
-module.exports.register = function (Handlebars, options) {
+module.exports.register = function (Handlebars) {
 
   Handlebars.registerHelper('replaceStr', function (haystack, needle, replacement) {
 
@@ -12,7 +10,7 @@ module.exports.register = function (Handlebars, options) {
     }
   });
 
-  Handlebars.registerHelper('excerp', function (string, paragraphs) {
+  Handlebars.registerHelper('excerp', function (string) {
     var split = string.split("<!--more-->");
     return new Handlebars.SafeString(split[0]);
   });
