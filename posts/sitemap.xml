@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://prettystack.github.io/jekyll-blog-starter/2014-03-01-chapter1.html</loc>
+    <lastmod>2014-03-01T22:38:52.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://prettystack.github.io/jekyll-blog-starter/2014-03-05-chapter2.html</loc>
+    <lastmod>2014-03-05T14:35:00.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://prettystack.github.io/jekyll-blog-starter/2014-03-06-markdown-test.html</loc>
+    <lastmod>2014-03-06T15:10:00.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://prettystack.github.io/jekyll-blog-starter/2014-03-07-chapter3.html</loc>
+    <lastmod>2014-03-07T20:10:00.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
