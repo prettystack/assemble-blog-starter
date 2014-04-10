@@ -3,7 +3,7 @@
 <div id="sidebar">
 
     <!-- Logo -->
-    <a href="{{ site.url }}/">
+    <a href="{{ config.site.url }}/">
       <div id="logo">
         <h1> {{ config.site.name}} </h1>
       </div>
@@ -17,9 +17,9 @@
         {{#each config.menus}}
 
           {{#sameUrl url ../pagename }}
-            <li class="current_page_item"><a href="{{url}}">{{name}}</a></li>
+            <li class="current_page_item"><a href="{{config.site.url}}{{url}}">{{name}}</a></li>
           {{else}}
-            <li><a href="{{url}}">{{name}}</a></li>
+            <li><a href="{{config.site.url}}{{url}}">{{name}}</a></li>
           {{/sameUrl}}
 
         {{/each}}
@@ -34,9 +34,9 @@
           {{#eachIndex this.pages}}
           {{#lt index 3}}
             {{#sameUrl item.pagename ../../../pagename }}
-              <li class="current_page_item"><a href="{{ replaceStr item.dest 'dist' '' }}">{{ item.data.title }}</a></li>
+              <li class="current_page_item"><a href="{{config.site.url}}{{ replaceStr item.dest 'dist' '' }}">{{ item.data.title }}</a></li>
             {{else}}
-              <li><a href="{{ replaceStr item.dest 'dist' ''}}">{{ item.data.title }}</a></li>
+              <li><a href="{{config.site.url}}{{ replaceStr item.dest 'dist' ''}}">{{ item.data.title }}</a></li>
             {{/sameUrl}}
 
           {{/lt}}

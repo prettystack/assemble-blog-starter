@@ -3,8 +3,8 @@ theme: striped
 
 # site globals
 site:
-  url: http://prettystack.github.io/jekyll-blog-starter
-  name: DonQuiblog
+  url: http://assemble-blog-starter.brace.io
+  name: Don Quiblog
   description: Performant Assemble.io blog starter
   build: dist/
 

@@ -4,7 +4,7 @@
 
 This is a complete [Assemble](http://assemble.io) boilerplate to get you started quickly on your next blog. Simply clone the repo, create new blog posts, hit `grunt prod` and you get a fully optimized website ready to be deployed!
 
-[![Striped Preview](http://www.prettystack.com/img/ce673ad7.donquiblog.png)](http://prettystack.github.io/jekyll-blog-starter)
+[![Striped Preview](http://www.prettystack.com/img/ce673ad7.donquiblog.png)](http://assemble-blog-starter.brace.io/)
 
 This starter kit contains integration to external services such as Disqus, Google Analytics, Facebook, ... It also comes with one of the great themes made by [HTML5 UP](http://html5up.net/) and to break from the boring 'lorem ipsum' our content comes from the [Gutenberg project](http://www.gutenberg.org/).
 
