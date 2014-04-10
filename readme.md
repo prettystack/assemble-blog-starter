@@ -6,6 +6,8 @@ This is a complete [Assemble](http://assemble.io) boilerplate to get you started
 
 [![Striped Preview](http://www.prettystack.com/img/ce673ad7.donquiblog.png)](http://assemble-blog-starter.brace.io/)
 
+Browse the [live preview](http://assemble-blog-starter.brace.io/).
+
 This starter kit contains integration to external services such as Disqus, Google Analytics, Facebook, ... It also comes with one of the great themes made by [HTML5 UP](http://html5up.net/) and to break from the boring 'lorem ipsum' our content comes from the [Gutenberg project](http://www.gutenberg.org/).
 
 Make sure to check out all our [starter kits](https://github.com/prettystack/), we will soon have starter kit for corporate website and admin interface.
