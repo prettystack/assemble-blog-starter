@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 
     watch: {
       site: {
-        files: ['Gruntfile.js', '<%= theme %>/**/*.hbs', 'pages/**/*.hbs', 'posts/**/*.md', '<%= theme %>/**/*.js', '<%= theme %>/*.md'],
+        files: ['config.yml', 'Gruntfile.js', '<%= theme %>/**/*.hbs', 'pages/**/*.hbs', 'posts/**/*.md', '<%= theme %>/**/*.js', '<%= theme %>/*.md'],
         tasks: ['newer:assemble']
       },
 
