@@ -17,13 +17,16 @@ layout: default.hbs
 
     <ul class="stats">
       {{#if config.disqus.shortname }}
-        <li><a href="{{ url }}#disqus_thread" class="fa fa-comment">?</a></li>
+        <li><a href="#disqus_thread" class="fa fa-comment">?</a></li>
+      {{/if}}
+      {{#if config.twitter.name }}
+        <li><a href="https://twitter.com/share?url={{encodeURI config.site.url}}{{replaceStr dest 'dist' ''}}&via={{config.twitter.name}}" class="fa fa-twitter" target="_blank"></a></li>
       {{/if}}
     </ul>
   </div>
 
   {{#if image }}
-    <a href="{{ url }}" class="image image-full"><img src="/images/{{ image }}" alt="" /></a>
+    <a href="#" class="image image-full"><img src="/images/{{ image }}" alt="" /></a>
   {{/if}}
 
   <div class="post">

@@ -26,3 +26,6 @@ disqus:
 google:
   analytics: UA-49342017-1 # Google analytics
   verification: "mLz0EXywn-dwnrN2y6nCZRlSvFTIm61gwANPbK0o2Uk" # Google webmaster verification
+
+twitter:
+  name: _prettystack_

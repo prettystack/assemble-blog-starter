@@ -20,6 +20,10 @@ layout: default.hbs
         {{#if ../../config.disqus.shortname }}
           <li><a href="{{ replaceStr this.dest 'dist' ''  }}#disqus_thread" class="fa fa-comment">?</a></li>
         {{/if}}
+
+      {{#if ../../config.twitter.name }}
+        <li><a href="https://twitter.com/share?url={{encodeURI ../../../config.site.url}}{{replaceStr this.dest 'dist' ''}}&via={{../../../config.twitter.name}}" class="fa fa-twitter" target="_blank"></a></li>
+      {{/if}}
       </ul>
 
     </div>
